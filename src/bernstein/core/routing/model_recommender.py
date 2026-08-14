@@ -1,5 +1,11 @@
-def confidence(agent_type, decision_key):
-    empirical_confidence_value = empirical_confidence(agent_type, decision_key)
-    if empirical_confidence_value < MIN_CONFIDENCE:
+def get_model(self, decision_key):
+    # A model must not be proposed unless the observed empirical confidence
+    # meets the configured minimum. Compute it once and apply the gate to the
+    # proposal returned by this method.
+    empirical_confidence = self.empirical_confidence(decision_key)
+    model = self._get_model(decision_key)
+
+    if model is None or empirical_confidence < self.min_confidence:
         return None
-    # rest of the function remains the same
+
+    return model
