@@ -1,0 +1,1 @@
+{"name": "Recurring Maintainer Corrections", "description": "Identify recurring maintainer corrections in merge history and create reusable review rules.", "pattern": "(sanitizing|correcting) a (request- or caller-derived) value before it reaches a log sink.", "occurrences": ["a4c8a66c", "970216ec", "59be3a5d4", "a4a8f4ba", "c47c70ee"]}
