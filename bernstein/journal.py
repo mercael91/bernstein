@@ -1,0 +1,3 @@
+def verify_journal(path: Path) -> bool:
+    events = load_events(path, strict=True)
+    # ... rest of the function ...
